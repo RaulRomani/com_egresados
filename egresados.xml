@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.2" type="component" method="upgrade">
+    <name>com_egresados</name>
+    <author>Raúl Romaní</author>
+    <creationDate>7 Setiembre 2015</creationDate>
+    <copyright>Copyright (C) 2015 Raúl Romaní</copyright>
+    <license>GNU General Public License version 2</license>
+    <authorEmail>romanidev@gmail.com</authorEmail> 
+    <version>0.1</version>
+    <description>COM_EGRESADOS_XML_DESCRIPTION</description>
+
+    <!-- Public front end files -->
+    <files folder="frontend">
+        <folder>models</folder>
+        <folder>views</folder>
+        <folder>language</folder>
+        <filename>egresados.php</filename>
+        <filename>controller.php</filename>
+        <filename>index.html</filename>
+
+        
+    </files>
+    <!-- SQL query files to execute on installation -->
+    <install>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install/mysql/install.sql</file>
+            <file driver="mysql">sql/install/mysql/install.sql</file>
+        </sql>
+    </install>
+    <uninstall>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install/mysql/uninstall.sql</file>
+            <file driver="mysql">sql/install/mysql/uninstall.sql</file>
+        </sql>
+    </uninstall>
+
+    <!-- Administrator back-end section -->
+    <administration>
+        <!-- Administration menu -->
+        <menu>COM_EGRESADOS</menu>
+        <submenu></submenu>
+
+        <!-- <menu view="cpanel">COM_DB8USERGROUPS</menu>
+		<menu 
+			link="com_db8usergroups&amp;view=items" 
+			view="items" 
+			>COM_DB8USERGROUPS_TITLE_ITEMS</menu>
+		<menu 
+			link="com_categories&amp;extension=com_db8usergroups" 
+			view="categories"
+			>COM_DB8USERGROUPS_TITLE_CATEGORIES</menu> -->
+
+        <!-- Back-end files -->
+        <files folder="backend">
+            <!-- <folder>helpers</folder> -->
+            <!-- <folder>language</folder> -->
+            <!-- <folder>models</folder> -->
+            <folder>sql</folder>
+            <folder>models</folder>
+            <folder>views</folder>
+            <folder>language</folder>
+            <filename>controller.php</filename>
+            <filename>egresados.php</filename>
+        	<filename>index.html</filename>
+        </files>
+
+        
+
+    </administration>
+</extension>
